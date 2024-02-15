@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Message Collapser",
+    "version": "1.0",
+    "description": "Allows users to select and collapse groups of messages in ChatGPT conversations.",
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.openai.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon_download.png",
+        "48": "images/icon_download.png",
+        "128": "images/icon_download.png"
+      }
+    },
+    "icons": {
+      "16": "images/icon_download.png",
+      "48": "images/icon_download.png",
+      "128": "images/icon_download.png"
+    }
+  }  
